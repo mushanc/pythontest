@@ -1,0 +1,9 @@
+import urllib.request
+
+keyword = "hello"
+url = "http://www.baidu.com/s?wd="+ keyword
+req = urllib.request.Request(url)
+data = urllib.request.urlopen(req).read()
+f = open("D:/python/4.html", "wb")
+f.write(data)
+f.close()
